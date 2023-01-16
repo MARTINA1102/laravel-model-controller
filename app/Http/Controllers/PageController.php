@@ -1,14 +1,15 @@
 <?php
-use App\Movies;
 
 namespace App\Http\Controllers;
+use App\Movie;
 
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function index() {
-        $movies = Movies::all();
+        $movies = Movie::all();
+        return view('home', compact('movies'));
     }
 
 }
