@@ -1,1 +1,22 @@
-//
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: orange;
+    text-align: center;
+}
+.flex_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    gap: 1rem;
+}
+.card{
+    background-color: black;
+    color: white;
+    flex: 0 0 20%;
+    text-align: center;
+}
+.card li{
+    list-style: none;
+}

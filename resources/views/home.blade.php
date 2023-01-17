@@ -9,22 +9,25 @@
 </head>
 <body>
     <h1>homepage</h1>
-    <div>
+    <div class="container">
         <h2>Film</h2>
-        <div>
-            @foreach ($movies ?? '' as $movie)
+        <div class="flex_card">
             <div>
-                <div>
-                    <h3>{{$movie->title}}</h3>
-                </div>
-                <ul>
-                  <li class="list-group-item">{{$movie->original_title}}</li>
-                  <li class="list-group-item">{{$movie->nationality}}</li>
-                  <li class="list-group-item">{{$movie->date}}</li>
-                  <li class="list-group-item">{{$movie->vote}}</li>
-                </ul>
-              </div>
-            @endforeach
+                @foreach ($movies ?? '' as $movie)
+                <div class="card">
+                    <div>
+                        <h3>{{$movie->title}}</h3>
+                    </div>
+                    <ul>
+                      <li class="list-group-item">{{$movie->original_title}}</li>
+                      <li class="list-group-item">{{$movie->nationality}}</li>
+                      <li class="list-group-item">{{$movie->date}}</li>
+                      <li class="list-group-item">{{$movie->vote}}</li>
+                    </ul>
+                  </div>
+                @endforeach
+            </div>
         </div>
+    </div>
 </body>
 </html>
